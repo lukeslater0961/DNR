@@ -31,12 +31,12 @@ public class EnemyScript : MonoBehaviour
     }//moves enemies in the direction of the the player stops if they are too far
 
     //PLAYER COLLISION-------------------------------------------------------------------------------------------------------------
-    private void OnCollisionEnter(Collision collision)
+    private IEnumerator OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             TouchingPlayer = true;
-            StartCoroutine(HitPlayer());
+            yield return StartCoroutine(HitPlayer());
         }
     }//when the enemy collides with the Player the boolean (touching player) are set to true and we start the coroutine
 

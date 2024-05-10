@@ -11,11 +11,11 @@ public class EnemySpawner : MonoBehaviour
     static public bool gameStart = true;//to be moved and modified when i have the begining UI done
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        StartCoroutine(WaitforStart());
+       yield return StartCoroutine(WaitforStart());
         if (gameStart)
-            StartCoroutine(SpawnTimer());
+           yield return StartCoroutine(SpawnTimer());
     }
 
     IEnumerator SpawnTimer()
@@ -35,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
         enemyCount++;
     }//spawns enemy randomly
+
     IEnumerator WaitforStart()
     {
         yield return new WaitForSeconds(1f);
