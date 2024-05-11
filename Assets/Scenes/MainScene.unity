@@ -232,9 +232,9 @@ RectTransform:
   - {fileID: 1038396804}
   m_Father: {fileID: 386144002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -161.71729, y: -27.610443}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 161.71729, y: -27.610443}
   m_SizeDelta: {x: 323.43457, y: 55.220886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125524895
@@ -946,13 +946,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dbce7515d5946a1b8a8ff86205b05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potions: 
-  ShieldPrefab: {fileID: 6112521401980424250, guid: 22e205eb6a0ab0f4f961b2f963069627, type: 3}
-  MeadPrefab: {fileID: 3837031014720627655, guid: 342b624f96c3365499622771af17eea8, type: 3}
-  minSpawnInterval: 0.5
-  maxSpawnInterval: 3
-  PotionCount: 0
-  RandPotion: 0
+  EnemySpawner: {fileID: 612790586}
+  ShieldPotionprefab: {fileID: 6112521401980424250, guid: 22e205eb6a0ab0f4f961b2f963069627, type: 3}
+  Meadprefab: {fileID: 3837031014720627655, guid: 342b624f96c3365499622771af17eea8, type: 3}
+  Potions:
+  - shield
+  - mead
+  Potions_value: 0
 --- !u!4 &1290235779
 Transform:
   m_ObjectHideFlags: 0
